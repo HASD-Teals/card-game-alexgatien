@@ -10,7 +10,7 @@ public class Card {
     public Card() {
     }
 
-    public Card(String color,char rank, String symbol, int value, boolean playable) {
+    public Card(String color, char rank, String symbol, int value, boolean playable) {
         this.color = color;
         this.rank = rank;
         this.symbol = symbol;
@@ -26,15 +26,19 @@ public class Card {
     public char getRank() {
         return this.rank;
     }
-    public String getSymbol(){
+
+    public String getSymbol() {
         return this.symbol;
     }
-    public int getValue(){
+
+    public int getValue() {
         return this.value;
     }
-    public boolean getPlayable(){
+
+    public boolean getPlayable() {
         return this.playable;
     }
+
     // MUTATORS
     public void setColor(String color) {
         this.color = color;
@@ -43,17 +47,24 @@ public class Card {
     public void setRank(char rank) {
         this.rank = rank;
     }
-    public void setValue(int value){
+
+    public void setValue(int value) {
         this.value = value;
     }
-    public void setPlayable(boolean playable){
+
+    public void setPlayable(boolean playable) {
         this.playable = playable;
     }
 
     // METHODS
 
+    public String toString() {
 
-
-
+        return "The color of the card is " + this.color
+                + ". The rank of the card is " + this.rank + ". The symbool of the card is "
+                + this.symbol + ".";
+    }
+    public boolean isEqual(){
+        return true;
+    }
 }
-
