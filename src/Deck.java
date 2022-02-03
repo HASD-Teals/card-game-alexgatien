@@ -1,18 +1,21 @@
 public class Deck {
     // PROPERTIES
-    private Card[] cards;
+    private Card[] deck;
 
     // CONSTRUCTORS
-    public Deck() {}
-
+    public Deck(){
+    Card[] cards = new Card[52];
+    
+    }
+    
     // ACCESSORS
     public Card[] getCards() {
-        return this.cards;
+        return this.deck;
     }
 
     // MUTATORS
     public void setCards(Card[] cards) {
-        this.cards = cards;
+        this.deck = cards;
     }
 
     // METHODS

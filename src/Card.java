@@ -61,10 +61,11 @@ public class Card {
     public String toString() {
 
         return "The color of the card is " + this.color
-                + ". The rank of the card is " + this.rank + ". The symbool of the card is "
+                + ". The rank of the card is " + this.rank + ". The symbol of the card is "
                 + this.symbol + ".";
     }
     public boolean isEqual(){
         return true;
     }
+    
 }
