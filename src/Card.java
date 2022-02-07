@@ -55,7 +55,9 @@ public class Card {
     public void setPlayable(boolean playable) {
         this.playable = playable;
     }
-
+    public void setSuit(String suit){
+        this.symbol = suit;
+    }
     // METHODS
 
     public String toString() {
