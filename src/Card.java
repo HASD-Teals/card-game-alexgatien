@@ -1,7 +1,7 @@
 public class Card {
     // PROPERTIES
     private String color;
-    private char rank;
+    private String rank;
     private String symbol;
     private int value;
     private boolean playable;
@@ -10,7 +10,7 @@ public class Card {
     public Card() {
     }
 
-    public Card(String color, char rank, String symbol, int value, boolean playable) {
+    public Card(String color, String rank, String symbol, int value, boolean playable) {
         this.color = color;
         this.rank = rank;
         this.symbol = symbol;
@@ -23,7 +23,7 @@ public class Card {
         return this.color;
     }
 
-    public char getRank() {
+    public String getRank() {
         return this.rank;
     }
 
@@ -44,7 +44,7 @@ public class Card {
         this.color = color;
     }
 
-    public void setRank(char rank) {
+    public void setRank(String rank) {
         this.rank = rank;
     }
 

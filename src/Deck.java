@@ -1,10 +1,10 @@
+import java.util.Random;
 public class Deck {
     // PROPERTIES
     private Card[] deck;
 
     // CONSTRUCTORS
     public Deck() {
-        Card[] cards = new Card[52];
 
     }
 
@@ -42,22 +42,23 @@ public class Deck {
                 if (aceHigh == true) {
                     cards[i].setValue(14);
                 }
-                cards[i].setRank('A');
+                cards[i].setRank("A");
             }
             if (value == 11) {
                 cards[i].setValue(11);
-                cards[i].setRank('J');
+                cards[i].setRank("J");
             }
             if (value == 12) {
                 cards[i].setValue(12);
-                cards[i].setRank('Q');
+                cards[i].setRank("Q");
             }
             if (value == 13) {
                 cards[i].setValue(13);
-                cards[i].setRank('K');
-            } else {
+                cards[i].setRank("K");
+            } 
+            if (value>1 && value <11) {
                 cards[i].setValue(value);
-                cards[i].setRank((char) value);
+                cards[i].setRank(Integer.toString(value));
             }
             value++;
 
@@ -70,13 +71,37 @@ public class Deck {
         return this.deck;
     }
 
+    public int cardsInDeck() {
+      return this.deck.length;
+    }
+    public Card getCardAt(int x){
+        return this.deck[x];
+    }
     // MUTATORS
     public void setCards(Card[] cards) {
         this.deck = cards;
     }
-
+    
     // METHODS
     public void shuffleCards() {
-        // Shuffle this.cards in a random order
+        Random rand = new Random();
+        
+        for(int i = 0; i < this.deck.length; i++){
+            int r = rand.nextInt(this.deck.length);
+            Card temp;
+            temp = this.deck[i];
+            this.deck[i] = this.deck[r];
+            this.deck[r] = temp;
+        }
     }
+
+    public String toString() {
+        String temp = "";
+        for (Card card : deck) {
+            temp += card.toString() + "\n";
+
+        }
+        return temp;
+    }
+
 }
